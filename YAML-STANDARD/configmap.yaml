@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-configmap
+  namespace: standard
+data:
+  user: "admin"
+  db: "storedb"
+  pwd: "password"
+  value: "trust"

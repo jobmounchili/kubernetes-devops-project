@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fastapi-deployment
+  namespace: standard
   labels:
     app: fastapi
 spec:
@@ -16,6 +17,6 @@ spec:
     spec:
       containers:
       - name: fastapi
-        image: localhost:5000/fastapi:latest
+        image: jobmounchili/fastapi:latest
         ports:
-        - containerPort: 80
+        - containerPort: 5000
