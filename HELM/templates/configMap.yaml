@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configmap.name }}
+  namespace: {{ .Values.nameSpace }}
+data:
+  user: {{ .Values.configmap.data.user }}
+  db: {{ .Values.configmap.data.db }}
+  pwd: {{ .Values.configmap.data.pwd }}
+  value: {{ .Values.configmap.data.value }}
