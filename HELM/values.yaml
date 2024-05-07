@@ -6,10 +6,8 @@ pgadminName: pgadmin
 configmap:
   name: my-configmap
   data:
-    user: "admin"
-    db: "storedb"
-    pwd: "password"
     value: "trust"
+    email: "admin@admin.com"
 
 
 secret:
@@ -19,6 +17,7 @@ secret:
     user: YWRtaW4=
     db: c3RvcmVkYg==
     pwd: cGFzc3dvcmQ=
+    pgadminpwd: cm9vdA==
     
 
 imageFastApi:

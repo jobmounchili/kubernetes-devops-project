@@ -1,0 +1,38 @@
+Logs for pod: pgadmin-868fb5b49-gbxbc
+NOTE: Configuring authentication for SERVER mode.
+
+pgAdmin 4 - Application Initialisation
+======================================
+
+postfix/postlog: starting the Postfix mail system
+[2024-05-07 13:58:41 +0000] [1] [INFO] Starting gunicorn 20.1.0
+[2024-05-07 13:58:41 +0000] [1] [INFO] Listening at: http://[::]:80 (1)
+[2024-05-07 13:58:41 +0000] [1] [INFO] Using worker: gthread
+[2024-05-07 13:58:41 +0000] [117] [INFO] Booting worker with pid: 117
+-----------------------------------
+Logs for pod: postgresql-7484dbf676-pvwtl
+2024-05-07 13:57:51.865 UTC [1] LOG:  starting PostgreSQL 12.0 on x86_64-pc-linux-musl, compiled by gcc (Alpine 8.3.0) 8.3.0, 64-bit
+2024-05-07 13:57:51.865 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-05-07 13:57:51.865 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2024-05-07 13:57:51.890 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-05-07 13:57:51.923 UTC [19] LOG:  database system was shut down at 2024-05-07 13:54:09 UTC
+2024-05-07 13:57:51.940 UTC [1] LOG:  database system is ready to accept connections
+-----------------------------------
+Logs for pod: fastapi-deployment-85fb9d489b-vbbxs
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+-----------------------------------
+Logs for pod: fastapi-deployment-85fb9d489b-xks5c
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+-----------------------------------
+Logs for pod: fastapi-deployment-85fb9d489b-d99g6
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+-----------------------------------

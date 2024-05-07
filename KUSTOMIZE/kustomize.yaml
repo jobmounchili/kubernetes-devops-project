@@ -1,0 +1,23 @@
+resources:
+- postgres
+- fastapi
+- pgadmin
+patchesStrategicMerge:
+- patch.yaml
+
+vars:
+- name: postgres_service
+  objref:
+    kind: Service
+    name: postgres
+    apiVersion: v1
+- name: fastapi_service
+  objref:
+    kind: Service
+    name: fastapi-deployment
+    apiVersion: v1
+- name: pgadmin_service
+  objref:
+    kind: Service
+    name: pgadmin
+    apiVersion: v1

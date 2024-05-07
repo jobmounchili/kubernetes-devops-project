@@ -4,7 +4,5 @@ metadata:
   name: my-configmap
   namespace: standard
 data:
-  user: "admin"
-  db: "storedb"
-  pwd: "password"
   value: "trust"
+  email: "admin@admin.com"

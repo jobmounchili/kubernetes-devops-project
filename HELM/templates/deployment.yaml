@@ -131,7 +131,13 @@ spec:
         ports:
         - containerPort: 8080
         env:
-        - name: PGADMIN_DEFAULT_EMAIL
-          value: admin@admin.com
-        - name: PGADMIN_DEFAULT_PASSWORD
-          value: root
+          - name: PGADMIN_DEFAULT_EMAIL
+            valueFrom:
+              configMapKeyRef:
+                name: my-configmap
+                key: email
+          - name: PGADMIN_DEFAULT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: my-secret
+                key: pgadminpwd

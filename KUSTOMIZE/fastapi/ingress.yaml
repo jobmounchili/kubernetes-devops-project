@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: fastapi-ingress
-  namespace: {{ .Values.nameSpace }}
+  namespace: kustomize
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
@@ -19,6 +19,6 @@ spec:
           pathType: Prefix
           backend:
              service:
-              name: {{ .Values.fastapiName }}
+              name: fastapi-deployment
               port:
                 number: 80

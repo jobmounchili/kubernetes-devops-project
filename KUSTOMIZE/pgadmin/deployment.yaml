@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pgadmin
-  namespace: standard
+  namespace: kustomize
 spec:
   replicas: 1
   selector:
@@ -22,10 +22,10 @@ spec:
           - name: PGADMIN_DEFAULT_EMAIL
             valueFrom:
               configMapKeyRef:
-                name: my-configmap
+                name: my-configmap-pgadmin
                 key: email
           - name: PGADMIN_DEFAULT_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: my-secret
+                name: my-secret-pgadmin
                 key: pgadminpwd
