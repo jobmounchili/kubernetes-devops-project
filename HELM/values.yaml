@@ -31,3 +31,9 @@ imagePostgres:
 
 imagePgadmin:
   name: dpage/pgadmin4
+
+hpa:
+  name: hpa-phpbb
+  minReplicas: 3
+  maxReplicas: 6
+  targetCPUUtilizationPercentage: 70

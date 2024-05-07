@@ -3,6 +3,39 @@ kind: Namespace
 metadata:
   name: {{ .Values.nameSpace }}
 ---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-pv
+  namespace: {{ .Values.nameSpace }}
+  labels:
+    app: db
+spec:
+  storageClassName: manuel
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/postgres"
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-pvc
+  namespace: {{ .Values.nameSpace }}
+  labels:
+    app: db
+spec:
+  storageClassName: manuel
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
