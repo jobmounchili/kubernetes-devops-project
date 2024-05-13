@@ -37,11 +37,12 @@ spec:
 
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: {{ .Values.postgresName }}
   namespace: {{ .Values.nameSpace }}
 spec:
+  serviceName: {{ .Values.postgresName }}
   replicas: 1
   selector:
     matchLabels:
